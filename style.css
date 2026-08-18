@@ -1443,3 +1443,450 @@ body.light-theme .video-card {
     grid-template-columns: 1fr;
   }
 }
+
+/* Source-code match pass: closer to uploaded AdaptLearn Spiderverse app. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(#ff0033 1.2px, transparent 1.2px);
+  background-size: 16px 16px;
+  opacity: 0.15;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar {
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  background: url("assets/adaptlearn_logo-DVy62qce.png") center / contain no-repeat;
+  border: 0;
+  box-shadow: none;
+  color: transparent;
+  font-size: 0;
+  filter: drop-shadow(0 0 8px var(--red));
+}
+
+.brand-text {
+  color: #000;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 1000;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  text-shadow: -2px 0 var(--cyan), 2px 0 var(--red);
+}
+
+.nav-list {
+  gap: 6px;
+}
+
+.nav-item {
+  min-height: 42px;
+  padding: 10px 14px;
+  border-width: 2px;
+  border-radius: 12px;
+  font-size: 0.76rem;
+  font-weight: 1000;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-item.active {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.collapse-button {
+  position: absolute;
+  right: -13px;
+  top: 32px;
+  width: 28px;
+  min-height: 28px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: #000;
+  z-index: 10;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.workspace-top {
+  min-height: 64px;
+  margin: -34px calc(clamp(18px, 4vw, 56px) * -1) 28px;
+  padding: 10px clamp(18px, 4vw, 56px);
+  border-bottom: 2px solid #000;
+  background: rgba(21, 16, 42, 0.9);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 4px 0 #000;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.search-box {
+  min-height: 42px;
+  border-width: 2px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.search-box input {
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.icon-button {
+  width: 38px;
+  min-height: 38px;
+  border-width: 2px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.dashboard-grid {
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 0.95fr);
+}
+
+.lesson-panel,
+.mini-card,
+.metric-card,
+.video-card,
+.course-hero,
+.portal-course {
+  border-width: 3px;
+  border-radius: 24px;
+}
+
+.welcome-panel {
+  min-height: 340px;
+  padding: clamp(28px, 4vw, 48px);
+  color: #fff;
+  background: linear-gradient(100deg, rgba(255, 0, 51, 0.92), rgba(123, 44, 191, 0.9) 54%, rgba(21, 16, 42, 0.96));
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-panel::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  bottom: -20px;
+  width: min(240px, 34vw);
+  aspect-ratio: 1;
+  background: url("assets/spider_theme/miles_patty.webp") center / contain no-repeat;
+  filter: drop-shadow(5px 5px 0 #000);
+  pointer-events: none;
+}
+
+.welcome-panel > * {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+}
+
+.section-label,
+.eyebrow {
+  width: max-content;
+  background: var(--yellow);
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 #000;
+  transform: rotate(-1.5deg);
+  padding: 4px 12px;
+  font-size: 0.68rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.welcome-panel h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+.welcome-panel p {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 800;
+}
+
+.revision-card {
+  padding: 24px;
+  background: rgba(21, 16, 42, 0.94);
+  color: #fff;
+}
+
+.revision-card h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.source-recommendations {
+  margin-top: 42px;
+}
+
+.source-video-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.source-video-card {
+  padding: 0;
+  overflow: hidden;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 180ms ease;
+}
+
+.source-video-card:hover {
+  transform: translateY(-4px);
+}
+
+.source-thumb {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.source-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.source-video-card:hover .source-thumb img {
+  transform: scale(1.06);
+}
+
+.earth-chip,
+.topic-chip,
+.source-thumb small {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 #000;
+  padding: 3px 7px;
+  font-size: 0.62rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.earth-chip {
+  top: 10px;
+  left: 10px;
+  background: var(--cyan);
+  color: #000;
+}
+
+.topic-chip {
+  top: 10px;
+  left: 104px;
+  background: var(--yellow);
+  color: #000;
+}
+
+.source-thumb small {
+  right: 10px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
+}
+
+.video-info {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 16px 8px;
+}
+
+.channel-badge {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #000;
+  border-radius: 999px;
+  box-shadow: 2px 2px 0 #000;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 1000;
+}
+
+.channel-badge.purple {
+  background: #7b2cbf;
+}
+
+.channel-badge.yellow {
+  background: var(--yellow);
+  color: #000;
+}
+
+.channel-badge.cyan {
+  background: var(--cyan);
+  color: #000;
+}
+
+.source-video-card h3 {
+  margin-bottom: 4px;
+  font-size: 0.86rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.source-video-card p {
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.source-video-card button {
+  margin: auto 16px 16px;
+  width: calc(100% - 32px);
+}
+
+body.light-theme::before {
+  opacity: 0.08;
+}
+
+body.light-theme .workspace-top {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+body.light-theme .revision-card,
+body.light-theme .source-video-card {
+  background: #fff;
+  color: #111;
+}
+
+body.light-theme .revision-card h3 {
+  color: #111;
+}
+
+/* CodeLeaf post-login polish */
+html.light body {
+  background: #fffdf2;
+}
+
+html.dark body {
+  background: #111015;
+}
+
+body::selection {
+  background: #ffd84d;
+  color: #111;
+}
+
+.comic-panel {
+  border-radius: 22px !important;
+}
+
+aside {
+  background:
+    linear-gradient(180deg, rgba(255, 216, 77, 0.1), transparent 38%),
+    var(--card, #fff) !important;
+}
+
+aside nav a[href="index.html"] {
+  background: #ff3131 !important;
+  color: #fff !important;
+}
+
+header input {
+  border-radius: 999px !important;
+}
+
+main .bg-gradient-to-r {
+  background: linear-gradient(135deg, #ff3131 0%, #ff7a1a 48%, #141018 100%) !important;
+}
+
+.comic-caption {
+  letter-spacing: 0.04em !important;
+}
+
+.codeleaf-collapsed aside {
+  width: 88px !important;
+}
+
+.codeleaf-collapsed aside span,
+.codeleaf-collapsed aside .comic-panel,
+.codeleaf-collapsed aside a > div + span {
+  opacity: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.codeleaf-collapsed aside nav a,
+.codeleaf-collapsed aside .border-t-2 a,
+.codeleaf-collapsed aside .border-t-2 button {
+  justify-content: center;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.login-redirect {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: #fffdf2;
+  color: #111;
+  font-family: Arial, sans-serif;
+}
+
+.redirect-panel {
+  width: min(420px, calc(100% - 32px));
+  border: 3px solid #111;
+  border-radius: 22px;
+  box-shadow: 8px 8px 0 #111;
+  background: #fff;
+  padding: 28px;
+  text-align: center;
+}
+
+.redirect-panel h1 {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.redirect-panel a {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 18px;
+  border: 2px solid #111;
+  border-radius: 999px;
+  background: #ff3131;
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+@media (max-width: 920px) {
+  .workspace-top {
+    margin-top: 0;
+  }
+
+  .source-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-panel::after {
+    opacity: 0.35;
+  }
+}
+
