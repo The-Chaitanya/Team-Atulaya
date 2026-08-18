@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | CodeLeaf Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar" aria-label="Main navigation">
+    <div class="sidebar-head">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CL</span>
+        <span class="brand-text">CodeLeaf</span>
+      </a>
+      <button class="collapse-button" type="button" aria-label="Collapse sidebar" aria-expanded="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 6l-6 6 6 6"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav-list">
+      <a class="nav-item" href="index.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"></path></svg></span><span class="nav-label">Dashboard</span></a>
+      <a class="nav-item active" href="course.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3zM8 4v16"></path></svg></span><span class="nav-label">Courses</span></a>
+      <a class="nav-item" href="interview.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 1 7 7c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 7-7zM9 10h6M12 7v6"></path></svg></span><span class="nav-label">Interview Prep</span></a>
+      <a class="nav-item" href="learning.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5l8-3 8 3v14l-8 3zM12 5v14M8 8h8M8 12h8"></path></svg></span><span class="nav-label">My Learning</span></a>
+      <a class="nav-item" href="revision.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 7h9a4 4 0 0 1 0 8H8M8 11l-4 4 4 4M18 3v4M20 5h-4"></path></svg></span><span class="nav-label">Revision Deck</span></a>
+      <a class="nav-item" href="projects.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"></path></svg></span><span class="nav-label">Projects</span></a>
+      <a class="nav-item" href="environment.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H4zM9 21h6M12 17v4"></path></svg></span><span class="nav-label">Environment</span></a>
+      <a class="nav-item" href="analytics.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V5M5 19h15M9 16V9M13 16V6M17 16v-4"></path></svg></span><span class="nav-label">Analytics</span></a>
+      <a class="nav-item" href="login.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"></path></svg></span><span class="nav-label">Profile</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <section class="profile-card" aria-label="User profile">
+        <div class="avatar">A</div>
+        <div class="profile-info">
+          <strong>Student</strong>
+          <span>Web learning</span>
+        </div>
+      </section>
+
+      <section class="streak-card" aria-label="Active learning streak">
+        <div class="flame" aria-hidden="true">&#128293;</div>
+        <div>
+          <strong>12 days</strong>
+          <span>active streak</span>
+        </div>
+      </section>
+
+      <nav class="utility-list" aria-label="Account actions">
+        <a class="nav-item" href="settings.html"><span class="nav-icon gear-icon" aria-hidden="true"><img src="gear.png" alt=""></span><span class="nav-label">Settings</span></a>
+        <a class="nav-item" href="login.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 5H5v14h5M14 8l4 4-4 4M8 12h10"></path></svg></span><span class="nav-label">Logout</span></a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="page course-page">
+    <header class="workspace-top page-tools">
+      <div></div>
+      <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M17.7 6.3l-1.4 1.4M7.7 16.3l-1.4 1.4M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+        </svg>
+      </button>
+    </header>
+    <section class="course-hero">
+      <p class="eyebrow">Multiverse course portal</p>
+      <h1>Real interactive full length courses</h1>
+
+      <form class="search-box course-search" role="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5"></path>
+        </svg>
+        <input type="search" placeholder="Search courses">
+      </form>
+
+      <div class="filter-row" aria-label="Course filters">
+        <button class="chip active" type="button">All</button>
+        <button class="chip" type="button">AI ML</button>
+        <button class="chip" type="button">Java</button>
+        <button class="chip" type="button">CPP</button>
+        <button class="chip" type="button">HTML</button>
+        <button class="chip" type="button">C</button>
+      </div>
+    </section>
+
+    <section class="featured-section" aria-labelledby="featured-heading">
+      <p class="eyebrow">Featured multiverse session</p>
+      <h2 id="featured-heading">Choose a path and start building</h2>
+
+      <div class="portal-grid">
+        <article class="portal-course red">
+          <div class="course-window">
+            <span>&lt;html&gt;</span>
+          </div>
+          <h3>Web Design Starter</h3>
+          <p>HTML, CSS, responsive layout, and clean page structure.</p>
+          <button class="small-button">Start course</button>
+        </article>
+
+        <article class="portal-course yellow">
+          <div class="course-window">
+            <span>JS</span>
+          </div>
+          <h3>JavaScript Quest</h3>
+          <p>Practice variables, functions, DOM, and interactive projects.</p>
+          <button class="small-button">Start course</button>
+        </article>
+
+        <article class="portal-course white">
+          <div class="course-window">
+            <span>AI</span>
+          </div>
+          <h3>AI ML Basics</h3>
+          <p>Learn datasets, models, predictions, and beginner ML logic.</p>
+          <button class="small-button">Start course</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="recommend-section" aria-labelledby="recommend-heading">
+      <p class="eyebrow">Recommended videos</p>
+      <h2 id="recommend-heading">Course videos picked for you</h2>
+      <div class="video-grid">
+        <article class="video-card"><div class="video-thumb red"><span>▶</span><small>2:14:30</small></div><h3>HTML CSS Full Course</h3><p>Build three responsive pages from zero.</p></article>
+        <article class="video-card"><div class="video-thumb cyan"><span>▶</span><small>1:48:12</small></div><h3>JavaScript Crash Course</h3><p>DOM, events, arrays, functions, and projects.</p></article>
+        <article class="video-card"><div class="video-thumb yellow"><span>▶</span><small>58:40</small></div><h3>AI ML Beginner Roadmap</h3><p>Core concepts, tools, and first model workflow.</p></article>
+        <article class="video-card"><div class="video-thumb dark"><span>▶</span><small>1:22:08</small></div><h3>Interview DSA Practice</h3><p>Patterns for arrays, strings, and problem solving.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
